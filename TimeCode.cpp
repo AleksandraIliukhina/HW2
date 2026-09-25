@@ -1,5 +1,6 @@
 // Aleksandra Iliukhina
-// Assignment 2 
+// Assignment 2, Part 2
+// For Note 3: I read the notes from HW2 part 2 before working on homework!
 
 #include "TimeCode.h"
 #include <stdexcept>
@@ -16,10 +17,6 @@ TimeCode::TimeCode(unsigned int hr, unsigned int min, long long unsigned int sec
 // Copy constructor
 TimeCode::TimeCode(const TimeCode& tc){
     t = tc.t;
-}
-
-// Destructor
-TimeCode::~TimeCode(){
 }
 
 // Set hours
@@ -165,15 +162,14 @@ bool TimeCode::operator>=(const TimeCode& other) const{
     return t >= other.t;
 }
 
-
 // Sources I used to understand how to write code better: 
 
-https://www.tutorialspoint.com/cpp_standard_library/stdexcept.htm 
+// https://www.tutorialspoint.com/cpp_standard_library/stdexcept.htm 
 
-https://www.geeksforgeeks.org/cpp/constructors-c/ 
+// https://www.geeksforgeeks.org/cpp/constructors-c/ 
 
-https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga 
+// https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga 
 
-https://www.geeksforgeeks.org/cpp/address-operator-in-c/ 
+// https://www.geeksforgeeks.org/cpp/address-operator-in-c/ 
 
-https://learn.microsoft.com/en-us/cpp/cpp/this-pointer?view=msvc-170&utm_source 
+// https://learn.microsoft.com/en-us/cpp/cpp/this-pointer?view=msvc-170&utm_source 

@@ -114,12 +114,8 @@ void TestSubtract(){
 	assert(tc8.ToString() == "0:0:0");
 	TimeCode tc9 = TimeCode(1, 0, 10); // Subtract with seconds rollover
 	TimeCode tc10 = TimeCode(0, 0, 20);
-	try{
-		TimeCode tc11 = tc9 - tc10;
-		assert(false);
-	}
-	catch(const invalid_argument& e){
-	}
+	TimeCode tc11 = tc9 - tc10;
+	assert(tc11.ToString() == "0:59:50");
 	
 	cout << "PASSED!" << endl << endl;
 }
@@ -298,15 +294,26 @@ void TestDifferentComparisons()
     cout << "PASSED!" << endl << endl;
 }
 	
+
 int main(){
-	
-	TestComponentsToSeconds();
-	TestDefaultConstructor();
-	TestComponentConstructor();
-	TestGetComponents();
-	
-	// Many othere test functions...
-	
-	cout << "PASSED ALL TESTS!!!" << endl;
-	return 0;
+    TestComponentsToSeconds();
+    TestDefaultConstructor();
+    TestComponentConstructor();
+    TestGetComponents();
+
+    TestSubtract();
+    TestSetMinutes();
+    TestSetHours();
+    TestSetSeconds();
+    TestGetTimeCodeAsSeconds();
+    TestCopyConstructor();
+    TestReset();
+    TestAdd();
+    TestMultiply();
+    TestDivide();
+    TestDifferentComparisons();
+
+    cout << "PASSED ALL TESTS!!!" << endl;
+
+    return 0;
 }
