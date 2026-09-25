@@ -2,7 +2,7 @@
 
 This project contains a TimeCode class and two programs that use it.
 
-TimeCode: A C++ project that implements a `TimeCode` class for working with hours, minutes, and seconds. 
+TimeCode:implements a TimeCode class for working with hours, minutes, and seconds. 
 Features:
 - Create and copy TimeCode objects
 - Convert time components to total seconds
